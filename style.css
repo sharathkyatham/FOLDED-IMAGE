@@ -1,0 +1,59 @@
+body {
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.img_box_area {
+    display: flex;
+    width: 90%;
+    height: 60vh;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.img_box {
+    flex: 0 0 20%;
+    background: url(./images/bentley_continental_gt_ice_race_2020_5k_2-HD.jpg);
+    background-size: 500%;
+    transition: all 1s ease-in-out;
+}
+
+body:hover .img_box {
+    transform: scaleX(0.8);
+}
+
+.img_box:nth-child(1) {
+    border-radius: 30px 0 0 30px;
+    background-position: 0% center; 
+}
+
+.img_box:nth-child(2) {
+    background-position: 25% center; 
+}
+
+.img_box:nth-child(3) {
+    background-position: 50% center; 
+}
+
+.img_box:nth-child(4) {
+    background-position: 75% center; 
+}
+
+.img_box:nth-child(5) {
+    border-radius: 0 30px 30px 0;
+    background-position: 100% center; 
+}
+
+body:hover .img_box:nth-child(odd) {
+    transform: skewY(16deg);
+}
+
+body:hover .img_box:nth-child(even) {
+    filter: brightness(0.65);
+    transform: skewY(-16deg);
+}
